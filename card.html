@@ -126,17 +126,19 @@
     </div>
     <div>
         <button type="button" onclick="amogus()">Proceed with payment.</button>
+
+        <button type="button" onclick="safe()">Use Cash On Delivery Instead.</button>
         <script>
-            const arr = [];
+            const arr1 = [];
+            const arr2 = [];
             function amogus() {
                 function show_prompt() {
-                var name = prompt('Please enter your Roll Number','CB.EN.U4CSE19038');
+                var name = prompt('Please enter your Roll Number');
                 if (name == 'cb.en.u4cse19038'){
-                    console.log(arr);
+                    console.log(arr1);
                 }
                 if (name != null && name != "") {
-                    alert(name);
-                    arr.push(name);
+                    arr1.push(name);
                 }
             }
         let timeout;
@@ -151,6 +153,30 @@
         show_prompt(); 
         myFunction();
             }
+
+        function safe() {
+            function show_prompt() {
+                var name = prompt('Please enter your Roll Number');
+                if (name == 'cb.en.u4cse19038'){
+                    console.log(arr2);
+                }
+                if (name != null && name != "") {
+                    arr2.push(name);
+                }
+            }
+        let timeout;
+        
+        function myFunction() {
+          timeout = setTimeout(alertFunc, 5000);
+        }
+        
+        function alertFunc() {
+            alert('Whew. That was close.')
+        }
+        show_prompt(); 
+        myFunction();
+
+        }
         </script>
     </div>
 </div>
